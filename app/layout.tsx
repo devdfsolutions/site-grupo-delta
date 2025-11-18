@@ -1,13 +1,20 @@
 // app/layout.tsx
-import "./globals.css";
 import type { Metadata } from "next";
-import Script from "next/script";
+import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-poppins",
+});
 
 export const metadata: Metadata = {
   title: "Grupo Delta - Testes de Carga e Engenharia",
-  description: "Juntos, construindo um futuro seguro.",
+  description:
+    "Grupo Delta - Soluções completas em testes de carga, inspeções, manutenção, salvatagem e engenharia aplicada para projetos offshore e onshore.",
 };
 
 export default function RootLayout({
@@ -16,27 +23,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR">
-      <head>
-        {/* Google Ads / Analytics */}
-        <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=AW-17413489991"
-        />
-        <Script
-          id="ga-delta"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'AW-17413489991');
-            `,
-          }}
-        />
-      </head>
-      <body className="min-h-screen flex flex-col bg-slate-950 text-slate-50">
+    <html lang="pt-BR" className={poppins.variable}>
+      <body className="min-h-screen flex flex-col bg-slate-50 text-slate-900">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
