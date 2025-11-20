@@ -17,7 +17,7 @@ export default function Footer() {
           <div className="flex items-center gap-2">
             <div className="relative w-32 h-24 md:w-25 md:h-28">
               <Image
-                src="/img/logodeltabranca.png"
+                src="/img/logodeltabranca1.png"
                 alt="Grupo Delta"
                 fill
                 className="object-contain"
@@ -41,10 +41,10 @@ export default function Footer() {
               className="w-8 h-8 rounded-md border border-slate-300/40 flex items-center justify-center hover:bg-slate-100 transition-colors"
             >
               <Image
-                src="/img/instagram.png"
+                src="/img/instagram1.png"
                 alt="Instagram"
-                width={30}
-                height={30}
+                width={20}
+                height={20}
                 className="object-contain"
               />
             </a>
@@ -56,10 +56,10 @@ export default function Footer() {
               className="w-8 h-8 rounded-md border border-slate-300/40 flex items-center justify-center hover:bg-slate-100 transition-colors"
             >
               <Image
-                src="/img/facebook.png"
+                src="/img/facebook1.png"
                 alt="Facebook"
-                width={30}
-                height={30}
+                width={20}
+                height={20}
                 className="object-contain"
               />
             </a>
@@ -71,10 +71,10 @@ export default function Footer() {
               className="w-8 h-8 rounded-md border border-slate-300/40 flex items-center justify-center hover:bg-slate-100 transition-colors"
             >
               <Image
-                src="/img/linkedin.png"
+                src="/img/linkedin1.png"
                 alt="LinkedIn"
-                width={30}
-                height={30}
+                width={20}
+                height={20}
                 className="object-contain"
               />
             </a>

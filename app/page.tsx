@@ -13,7 +13,6 @@ export default function HomePage() {
 
   const galleryPhotos = [1, 2, 3, 4, 5, 6];
 
-  // cards de serviços (ajusta os caminhos das imagens conforme suas fotos)
   const services = [
     {
       slug: "testes-de-carga",
@@ -40,9 +39,8 @@ export default function HomePage() {
 
   return (
     <>
-      {/* HERO FULL-WIDTH (vídeo do navio) */}
+      {/* HERO */}
       <section className="relative w-full min-h-[70vh] overflow-hidden bg-slate-900">
-        {/* Vídeo de fundo */}
         <video
           className="absolute inset-0 w-full h-full object-cover"
           autoPlay
@@ -53,12 +51,10 @@ export default function HomePage() {
           <source src="/video/hero-delta.mp4" type="video/mp4" />
         </video>
 
-        {/* Overlay escuro pra destacar o texto */}
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/40 via-slate-950/10 to-slate-950/10" />
 
-        {/* Conteúdo do hero */}
-        <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-10 py-16 md:py-24 space-y-6">
-          <p className="text-[40px] font-medium tracking-[auto] text-sky-400 uppercase">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-10 py-16 md:py-24 space-y-3">
+          <p className="text-[30px] font-medium tracking-[auto] text-sky-400 uppercase">
             Atuamos em todo o Brasil
           </p>
 
@@ -76,16 +72,36 @@ export default function HomePage() {
             disponibilidade operacional.
           </p>
 
-          <div className="flex flex-wrap gap-3">
-            <Link
-              href="/contato"
-              className="px-6 py-3 rounded-lg bg-[#3eb1f9] text-slate-50 text-sm font-semibold hover:bg-[#ffffff] transition-colors"
+          {/* BOTÕES HERO */}
+          <div className="flex flex-wrap gap-4">
+            {/* Botão WhatsApp (fundo branco, texto azul) */}
+            <a
+              href="https://api.whatsapp.com/send/?phone=5521986560236&text=Ol%C3%A1%21+Encontrei+a+empresa+de+voc%C3%AAs+no+Google+e+tenho+interesse+em+conhecer+melhor+os+servi%C3%A7os.&type=phone_number&app_absent=0"
+              target="_blank"
+              rel="noreferrer"
+              className="
+                inline-flex items-center justify-center
+                rounded-full border border-white/80 bg-white
+                px-7 py-3 text-[13px] font-semibold text-[#1c2743]
+                shadow-sm
+                transition-all duration-300
+                hover:shadow-lg hover:-translate-y-[2px]
+              "
             >
               Fale com um especialista
-            </Link>
+            </a>
+
+            {/* Botão secundário (mantido no estilo que você gostou) */}
             <Link
               href="/servicos"
-              className="px-6 py-3 rounded-lg bg-[#3eb1f9] text-slate-50 text-sm font-semibold hover:bg-[#ffffff] transition-colors"
+              className="
+                inline-flex items-center justify-center
+                rounded-full border border-white/80 bg-white/10
+                px-7 py-3 text-[13px] font-semibold text-white
+                backdrop-blur-sm
+                transition-all duration-300
+                hover:bg-white hover:text-[#1c2743] hover:shadow-lg
+              "
             >
               Conheça nossos serviços
             </Link>
@@ -97,7 +113,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CLIENTES - Logos em quadrados iguais */}
+      {/* CLIENTES */}
       <section className="w-full py-14 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6 place-items-center">
@@ -121,20 +137,20 @@ export default function HomePage() {
 
       {/* CONTEÚDO PRINCIPAL */}
       <main className="max-w-6xl mx-auto px-4 py-16 space-y-16">
-        {/* BLOCO SUSTENTABILIDADE + GALERIA */}
+        {/* SUSTENTABILIDADE */}
         <section className="space-y-8">
           <div className="grid md:grid-cols-2 gap-10 items-center">
-            {/* Texto à esquerda */}
             <div className="flex flex-col gap-10 md:pr-8 max-w-xl">
               <p className="text-[25px] font-medium tracking-[0.1em] text-sky-700 uppercase">
                 Sustentabilidade e eficiência.
               </p>
-              {/* TÍTULO EM 2 LINHAS */}
+
               <h2 className="text-[35px] font-semibold leading-tight text-slate-900">
                 Cada Projeto é tratado com
                 <br className="hidden md:block" />
                 dedicação e segurança.
               </h2>
+
               <p className="text-[20px] leading-relaxed text-slate-600">
                 Atuamos lado a lado com nossos clientes, desde o planejamento
                 até a execução, buscando decisões técnicas alinhadas às normas,
@@ -143,7 +159,6 @@ export default function HomePage() {
               </p>
             </div>
 
-            {/* Galeria à direita */}
             <div className="grid grid-cols-3 gap-3 md:gap-4">
               {galleryPhotos.map((n) => (
                 <div
@@ -162,7 +177,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* CERTIFICAÇÕES (logos maiores nos mesmos cards) */}
+        {/* CERTIFICAÇÕES */}
         <section className="space-y-6">
           <h2 className="text-[25px] font-medium tracking-[0.1em] text-sky-700 uppercase">
             Somos uma empresa certificada.
@@ -179,7 +194,7 @@ export default function HomePage() {
               <div className="relative w-28 h-20 md:w-32 md:h-24">
                 <Image
                   src="/img/cert-iso-9001.png"
-                  alt="Certificação ISO 9001:2015"
+                  alt="ISO 9001:2015"
                   fill
                   className="object-contain transition-transform duration-200 group-hover:scale-105"
                 />
@@ -187,7 +202,7 @@ export default function HomePage() {
               <div className="space-y-1">
                 <h3 className="text-sm font-semibold">ISO 9001:2015</h3>
                 <p className="text-xs text-slate-500">
-                  Sistema de Gestão da Qualidade (SGQ).
+                  Sistema de Gestão da Qualidade.
                 </p>
               </div>
             </div>
@@ -197,7 +212,7 @@ export default function HomePage() {
               <div className="relative w-28 h-20 md:w-32 md:h-24">
                 <Image
                   src="/img/cert-dpc.png"
-                  alt="Diretoria de Portos e Costas"
+                  alt="DPC"
                   fill
                   className="object-contain transition-transform duration-200 group-hover:scale-105"
                 />
@@ -223,7 +238,7 @@ export default function HomePage() {
               <div className="space-y-1">
                 <h3 className="text-sm font-semibold">CRALOG</h3>
                 <p className="text-xs text-slate-500">
-                  Certificação em logística e confiabilidade.
+                  Certificação em logística.
                 </p>
               </div>
             </div>
@@ -268,7 +283,6 @@ export default function HomePage() {
                 aria-label={`Ver detalhes de ${service.title}`}
                 className="group relative block overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:shadow-xl hover:border-[#1c2743]/60 min-h-[300px] md:min-h-[400px]"
               >
-                {/* Fundo com imagem */}
                 <div className="absolute inset-0">
                   <Image
                     src={service.image}
@@ -276,22 +290,17 @@ export default function HomePage() {
                     fill
                     className="object-cover scale-100 group-hover:scale-105 opacity-90 group-hover:opacity-80 transition-all duration-500"
                   />
-                  {/* leve escurecida pra leitura do título inicial */}
                   <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/30" />
                 </div>
 
-                {/* ESTADO NORMAL: só o título centralizado */}
                 <div className="relative z-10 flex h-full items-center justify-center text-center transition-opacity duration-300 group-hover:opacity-0">
                   <h3 className="px-4 text-[22px] font-semibold uppercase tracking-[0.16em] text-white drop-shadow-md">
                     {service.title}
                   </h3>
                 </div>
 
-                {/* HOVER: fundo branco com título + descrição + "Saiba mais" */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  {/* fundo branco */}
                   <div className="absolute inset-0 bg-white/95" />
-                  {/* conteúdo */}
                   <div className="relative z-10 px-6 text-center flex flex-col items-center justify-center space-y-3">
                     <h3 className="text-[20px] font-semibold text-[#1c2743]">
                       {service.title}
@@ -309,7 +318,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* EXCELÊNCIA / CTA FINAL */}
+        {/* CTA FINAL */}
         <section className="grid md:grid-cols-[1.3fr,1fr] gap-8 items-center border border-slate-200 rounded-2xl p-6 bg-white shadow-sm">
           <div className="space-y-3">
             <h2 className="text-xl font-semibold text-[#1c2743]">
@@ -317,13 +326,12 @@ export default function HomePage() {
             </h2>
             <p className="text-sm text-slate-600">
               Atuando em todo o Brasil com foco em segurança, sustentabilidade e
-              eficiência, o Grupo Delta entrega soluções completas para testes
-              de carga, inspeções, manutenção e salvatagem.
+              eficiência, o Grupo Delta entrega soluções completas.
             </p>
             <ul className="text-sm text-slate-600 space-y-1">
               <li>• Expertise comprovada em projetos complexos.</li>
               <li>• Compromisso com normas e certificadoras internacionais.</li>
-              <li>• Atuação nacional com suporte próximo ao cliente.</li>
+              <li>• Suporte próximo ao cliente.</li>
             </ul>
             <p className="text-sm font-medium text-[#8b3a3a]">
               Juntos, construindo um futuro seguro.
@@ -335,8 +343,8 @@ export default function HomePage() {
               Precisa de um projeto personalizado?
             </h3>
             <p className="text-xs text-slate-600">
-              Conte sua necessidade para nossa equipe técnica. Vamos analisar
-              seu cenário e propor a solução mais segura e eficiente.
+              Conte sua necessidade. Vamos propor a solução mais segura e
+              eficiente.
             </p>
             <Link
               href="/contato"
