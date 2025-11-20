@@ -51,10 +51,10 @@ export default function HomePage() {
           <source src="/video/hero-delta.mp4" type="video/mp4" />
         </video>
 
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/40 via-slate-950/10 to-slate-950/10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/60 via-slate-950/10 to-slate-950/10" />
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-10 py-16 md:py-24 space-y-3">
-          <p className="text-[30px] font-medium tracking-[auto] text-sky-400 uppercase">
+          <p className="text-[25px] font-semibold tracking-[0.1em] text-sky-400 uppercase">
             Atuamos em todo o Brasil
           </p>
 
@@ -91,7 +91,7 @@ export default function HomePage() {
               Fale com um especialista
             </a>
 
-            {/* Botão secundário (mantido no estilo que você gostou) */}
+            {/* Botão secundário */}
             <Link
               href="/servicos"
               className="
@@ -179,7 +179,7 @@ export default function HomePage() {
 
         {/* CERTIFICAÇÕES */}
         <section className="space-y-6">
-          <h2 className="text-[25px] font-medium tracking-[0.1em] text-sky-700 uppercase">
+          <h2 className="text-[25px] font-semibold tracking-[0.1em] text-sky-700 uppercase">
             Somos uma empresa certificada.
           </h2>
           <p className="text-[16px] leading-relaxed text-slate-600">
@@ -265,7 +265,7 @@ export default function HomePage() {
 
         {/* PRINCIPAIS SERVIÇOS */}
         <section className="space-y-4">
-          <h2 className="text-[30px] font-medium tracking-[0.1em] text-sky-700 uppercase">
+          <h2 className="text-[25px] font-semibold tracking-[0.1em] text-sky-700 uppercase">
             Principais serviços
           </h2>
 
@@ -318,43 +318,56 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* CTA FINAL */}
-        <section className="grid md:grid-cols-[1.3fr,1fr] gap-8 items-center border border-slate-200 rounded-2xl p-6 bg-white shadow-sm">
-          <div className="space-y-3">
-            <h2 className="text-xl font-semibold text-[#1c2743]">
-              Excelência em Soluções Offshore e Onshore.
-            </h2>
-            <p className="text-sm text-slate-600">
-              Atuando em todo o Brasil com foco em segurança, sustentabilidade e
-              eficiência, o Grupo Delta entrega soluções completas.
-            </p>
-            <ul className="text-sm text-slate-600 space-y-1">
-              <li>• Expertise comprovada em projetos complexos.</li>
-              <li>• Compromisso com normas e certificadoras internacionais.</li>
-              <li>• Suporte próximo ao cliente.</li>
-            </ul>
-            <p className="text-sm font-medium text-[#8b3a3a]">
-              Juntos, construindo um futuro seguro.
-            </p>
+        {/* CTA FINAL – ESTILO NÚMEROS / MAPA */}
+        <section className="relative w-full py-16">
+          {/* Mapa de fundo com baixa opacidade (coloque um arquivo em /public/img/mapa.png) */}
+          <div className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-15">
+            <Image
+              src="/img/mapa.png"
+              alt="Mapa mundial"
+              width={900}
+              height={900}
+              className="object-contain"
+            />
           </div>
 
-          <div className="space-y-3">
-            <h3 className="text-sm font-semibold text-[#1c2743]">
-              Precisa de um projeto personalizado?
-            </h3>
-            <p className="text-xs text-slate-600">
-              Conte sua necessidade. Vamos propor a solução mais segura e
-              eficiente.
+          <div className="relative max-w-6xl mx-auto px-4 text-center space-y-6">
+            <p className="uppercase text-[13px] tracking-[0.25em] text-sky-600">
+              Experiência nacional e confiança global
             </p>
-            <Link
-              href="/contato"
-              className="inline-flex justify-center items-center w-full px-4 py-2 rounded-lg bg-[#1c2743] text-slate-50 text-sm font-semibold hover:bg-[#273760] transition-colors"
-            >
-              Solicitar contato técnico
-            </Link>
-            <p className="text-[11px] text-slate-500">
-              Atendimento 24h • comercial@grupodelta.ind.br
+
+            <h2 className="text-3xl md:text-4xl font-semibold text-[#1c2743]">
+              Juntos com nossos clientes, transformamos desafios
+              <br className="hidden md:block" />
+              em soluções inovadoras.
+            </h2>
+
+            <p className="text-sm text-slate-500">
+              Juntos, construindo um futuro seguro.
             </p>
+
+            {/* NÚMEROS */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-10 pt-6">
+              <div className="flex flex-col gap-1">
+                <h3 className="text-4xl font-light text-sky-600">3.5K+</h3>
+                <p className="text-sm text-slate-600">Projetos concluídos</p>
+              </div>
+
+              <div className="flex flex-col gap-1">
+                <h3 className="text-4xl font-light text-sky-600">100%</h3>
+                <p className="text-sm text-slate-600">Comprometimento</p>
+              </div>
+
+              <div className="flex flex-col gap-1">
+                <h3 className="text-4xl font-light text-sky-600">500+</h3>
+                <p className="text-sm text-slate-600">Clientes satisfeitos</p>
+              </div>
+
+              <div className="flex flex-col gap-1">
+                <h3 className="text-4xl font-light text-sky-600">10+</h3>
+                <p className="text-sm text-slate-600">Anos de experiência</p>
+              </div>
+            </div>
           </div>
         </section>
       </main>

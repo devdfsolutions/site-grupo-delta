@@ -64,7 +64,7 @@ export default function Header() {
         
         {/* LOGO */}
         <Link href="/" className="flex items-center gap-3">
-          <div className="relative w-40 h-10 md:w-48 md:h-12">
+          <div className="relative w-40 h-10 md:w-48 md:h-20">
             <Image
               src="/img/logodelta.png"
               alt="Delta Group"

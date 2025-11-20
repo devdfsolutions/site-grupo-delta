@@ -15,7 +15,7 @@ export default function Footer() {
         {/* Logo à esquerda + texto à direita */}
         <div className="space-y-4">
           <div className="flex items-center gap-2">
-            <div className="relative w-32 h-24 md:w-25 md:h-28">
+            <div className="relative w-32 h-24 md:w-40 md:h-28">
               <Image
                 src="/img/logodeltabranca1.png"
                 alt="Grupo Delta"
