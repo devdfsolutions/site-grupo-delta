@@ -67,7 +67,7 @@ export default function InspecaoPage() {
               alt="Inspeção Naval"
               width={600}
               height={400}
-              className="rounded-xl object-cover shadow-md"
+              className="rounded-xl object-cover shadow-md h-full"
             />
             <Image
               src="/img/servicos/inspecoes/inspec5.png"
