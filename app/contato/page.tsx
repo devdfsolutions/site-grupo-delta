@@ -1,5 +1,6 @@
 // app/contato/page.tsx
 import Link from "next/link";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata = {
   title: "Contato | Grupo Delta",
@@ -67,64 +68,7 @@ export default function ContatoPage() {
           </div>
 
           {/* FORMULÁRIO CLARO NO PADRÃO DO SITE */}
-          <div className="bg-white border border-slate-200 rounded-2xl shadow-md p-6 md:p-7 space-y-5">
-            <form
-              className="space-y-4"
-              action="mailto:comercial@grupodelta.ind.br"
-              method="post"
-              encType="text/plain"
-            >
-              {/* Campo Nome */}
-              <input
-                type="text"
-                name="Nome"
-                required
-                placeholder="Nome"
-                className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-[#1c2743] focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none transition"
-              />
-
-              {/* Campo Email */}
-              <input
-                type="email"
-                name="E-mail"
-                required
-                placeholder="E-mail"
-                className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-[#1c2743] focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none transition"
-              />
-
-              {/* Campo Telefone */}
-              <input
-                type="text"
-                name="Telefone"
-                placeholder="Telefone"
-                className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-[#1c2743] focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none transition"
-              />
-
-              {/* Campo Empresa */}
-              <input
-                type="text"
-                name="Empresa"
-                placeholder="Empresa"
-                className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-[#1c2743] focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none transition"
-              />
-
-              {/* Campo Mensagem */}
-              <textarea
-                name="Mensagem"
-                rows={4}
-                placeholder="Descreva sua necessidade"
-                className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-[#1c2743] focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none transition resize-none"
-              />
-
-              {/* Botão Azul */}
-              <button
-                type="submit"
-                className="w-full rounded-lg bg-sky-600 hover:bg-sky-700 text-white font-semibold py-2.5 text-sm shadow-md transition"
-              >
-                Enviar mensagem
-              </button>
-            </form>
-          </div>
+          <ContactForm />
         </div>
       </section>
 
