@@ -1,14 +1,10 @@
 // app/api/contato/route.ts
-// @ts-nocheck
 import { NextResponse } from "next/server";
-import { Resend } from "resend";
-
-const resend = new Resend(process.env.RESEND_API_KEY);
+import { resend } from "@/lib/resend";
 
 export async function POST(req: Request) {
   try {
-    const body = await req.json();
-    const { nome, email, telefone, empresa, mensagem } = body;
+    const { nome, email, telefone, empresa, mensagem } = await req.json();
 
     if (!nome || !email || !mensagem) {
       return NextResponse.json(
@@ -18,7 +14,9 @@ export async function POST(req: Request) {
     }
 
     await resend.emails.send({
-      from: "Site Grupo Delta <no-reply@grupodelta.ind.br>",
+      from:
+        process.env.CONTACT_FROM_EMAIL ||
+        "Site Grupo Delta <no-reply@grupodelta.ind.br>",
       to: process.env.CONTACT_TO_EMAIL ?? "comercial@grupodelta.ind.br",
       subject: `Novo contato pelo site - ${nome}`,
       reply_to: email,
@@ -35,7 +33,7 @@ ${mensagem}
 
     return NextResponse.json({ ok: true });
   } catch (error) {
-    console.error(error);
+    console.error("Erro ao enviar contato:", error);
     return NextResponse.json(
       { error: "Erro ao enviar mensagem." },
       { status: 500 }
