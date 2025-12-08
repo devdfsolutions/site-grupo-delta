@@ -16,7 +16,7 @@ export async function POST(req: Request) {
     await resend.emails.send({
       from:
         process.env.CONTACT_FROM_EMAIL ||
-        "Site Grupo Delta <no-reply@grupodelta.ind.br>",
+        "Site Grupo Delta <no-reply@send.grupodelta.ind.br>",
       to: process.env.CONTACT_TO_EMAIL ?? "comercial@grupodelta.ind.br",
       subject: `Novo contato pelo site - ${nome}`,
       replyTo: email,
