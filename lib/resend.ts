@@ -2,7 +2,7 @@
 import { Resend } from "resend";
 
 if (!process.env.RESEND_API_KEY) {
-  throw new Error("RESEND_API_KEY não configurada");
+  throw new Error("RESEND_API_KEY não configurada no ambiente.");
 }
 
 export const resend = new Resend(process.env.RESEND_API_KEY);
