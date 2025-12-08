@@ -13,11 +13,16 @@ export async function POST(req: Request) {
       );
     }
 
+    const fromEmail =
+      process.env.CONTACT_FROM_EMAIL ||
+      "Site Grupo Delta <no-reply@grupodelta.ind.br>";
+
+    const toEmail =
+      process.env.CONTACT_TO_EMAIL || "comercial@grupodelta.ind.br";
+
     await resend.emails.send({
-      from:
-        process.env.CONTACT_FROM_EMAIL ||
-        "Site Grupo Delta <no-reply@send.grupodelta.ind.br>",
-      to: process.env.CONTACT_TO_EMAIL ?? "comercial@grupodelta.ind.br",
+      from: fromEmail,
+      to: toEmail,
       subject: `Novo contato pelo site - ${nome}`,
       replyTo: email,
       text: `
@@ -40,4 +45,3 @@ ${mensagem}
     );
   }
 }
- 
