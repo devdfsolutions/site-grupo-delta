@@ -97,10 +97,13 @@ export default function HomePage() {
               className="
                 inline-flex items-center justify-center
                 rounded-full border border-white/80 bg-white/10
-                px-7 py-3 text-[13px] font-semibold text-white
+                px-7 py-3 text-[13px] font-semibold
+                text-white
                 backdrop-blur-sm
                 transition-all duration-300
-                hover:bg-white hover:text-[#1c2743] hover:shadow-lg
+                hover:bg-white
+                houver:text-[#1c2743]
+                houver:shadow-lg
               "
             >
               Conheça nossos serviços
