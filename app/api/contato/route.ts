@@ -19,7 +19,6 @@ export async function POST(req: Request) {
         "Site Grupo Delta <no-reply@grupodelta.ind.br>",
       to: process.env.CONTACT_TO_EMAIL ?? "comercial@grupodelta.ind.br",
       subject: `Novo contato pelo site - ${nome}`,
-      // AQUI ESTAVA O PROBLEMA: é replyTo, não reply_to
       replyTo: email,
       text: `
 Nome: ${nome}
