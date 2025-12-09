@@ -81,7 +81,7 @@ export default function HomePage() {
               rel="noreferrer"
               className="
                 inline-flex items-center justify-center
-                rounded-full border border-white/10 bg-white/30
+                rounded-full border border-white/80 bg-white
                 px-7 py-3 text-[13px] font-semibold text-[#1c2743]
                 shadow-sm
                 transition-all duration-300
@@ -96,7 +96,7 @@ export default function HomePage() {
               href="/servicos"
               className="
                 inline-flex items-center justify-center
-                rounded-full border border-white/80 bg-white/10
+                rounded-full border border-white/10 bg-white/30
                 px-7 py-3 text-[13px] font-semibold text-white
                 backdrop-blur-sm
                 transition-all duration-300
