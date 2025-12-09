@@ -222,7 +222,7 @@ export default function SobrePage() {
         <div className="absolute inset-0 bg-slate-200/10" />
 
         {/* Logo no canto direito */}
-        <div className="absolute right-6 bottom-6 w-24 md:w-50 opacity-70">
+        <div className="absolute right-5 bottom-60 w-24 md:w-40 opacity-70">
           <Image
             src="/img/logodeltabranca1.png"
             alt="Logo Delta"
@@ -233,7 +233,7 @@ export default function SobrePage() {
         </div>
 
         {/* Conteúdo */}
-        <div className="relative max-w-6xl mx-auto px-4 lg:px-0 py-14 md:py-20 text-slate-50">
+        <div className="bottom-2 relative max-w-6xl mx-auto px-4 lg:px-0 py-14 md:py-20 text-slate-50">
           <p className="text-xs font-semibold tracking-[0.25em] uppercase mb-3">
             Services
           </p>
@@ -249,17 +249,17 @@ export default function SobrePage() {
               {
                 title: "Redução de Custos",
                 desc: "Buscamos constantemente otimizar processos e adotar soluções inovadoras, reduzindo custos sem comprometer a qualidade.",
-                icon: "/img/sobre/icons/iconeconomia1.png",
+                icon: "/img/sobre/icons/dinheiro.png",
               },
               {
                 title: "Compromisso com o Futuro",
                 desc: "Garantimos segurança em nossas operações, preservando o meio ambiente e respeitando as comunidades onde atuamos.",
-                icon: "/img/sobre/icons/iconfuturo1.png",
+                icon: "/img/sobre/icons/mundo.png",
               },
               {
                 title: "Valorização das Pessoas",
                 desc: "Nossa equipe é nosso maior ativo. Investimos em desenvolvimento contínuo e em um ambiente que valoriza mérito e inovação.",
-                icon: "/img/sobre/icons/iconfuncionario1.png",
+                icon: "/img/sobre/icons/humanos.png",
               },
             ].map((item) => (
               <div key={item.title} className="flex gap-4">
@@ -317,7 +317,6 @@ export default function SobrePage() {
       </section>
 
       {/* NOSSA EQUIPE – LIDERANÇA */}
-      {/* -mt-8 / -mt-10 puxa a sessão pra cima, diminuindo o “espação” */}
       <section className="w-full bg-slate-50 pb-16 -mt-6 md:-mt-10">
         <div className="max-w-6xl mx-auto px-4 lg:px-0">
           <div className="text-center mb-10 md:mb-12">
@@ -338,23 +337,29 @@ export default function SobrePage() {
                 name: "Renan Braga",
                 role: "CEO",
                 img: "/img/sobre/fotosobrerenan.jpg",
+                instagram: "https://www.instagram.com/deltagroupsafety/",
+                linkedin: "https://www.linkedin.com/in/renanbragaengenheiro/",
               },
               {
                 name: "Eliza Faria",
                 role: "Gerente Operacional",
                 img: "/img/sobre/fotosobreeliza.jpg",
+                instagram: "https://www.instagram.com/deltagroupsafety/",
+                linkedin: "https://www.linkedin.com/in/elizafariam/",
               },
               {
                 name: "Karen Amichi",
                 role: "Gerente Estratégica Corporativa",
                 img: "/img/sobre/fotosobrekaren.jpg",
+                instagram: "https://www.instagram.com/deltagroupsafety/",
+                linkedin: "https://www.linkedin.com/in/karenamichi/",
               },
             ].map((pessoa) => (
               <div
                 key={pessoa.name}
                 className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col items-center text-center"
               >
-                {/* 👉 Aqui ajustamos pra foto aparecer inteira */}
+                {/* FOTO */}
                 <div className="relative w-full aspect-[3/4] bg-slate-100">
                   <Image
                     src={pessoa.img}
@@ -363,13 +368,48 @@ export default function SobrePage() {
                     className="object-contain"
                   />
                 </div>
-                <div className="px-4 py-4 space-y-1">
+
+                {/* NOME, CARGO, REDES */}
+                <div className="px-4 py-4 space-y-2">
                   <h3 className="font-semibold text-slate-900">
                     {pessoa.name}
                   </h3>
                   <p className="text-xs uppercase tracking-[0.1em] text-slate-500">
                     {pessoa.role}
                   </p>
+
+                  {/* ÍCONES DE REDES SOCIAIS */}
+                  <div className="mt-2 flex items-center justify-center gap-4">
+                    <a
+                      href={pessoa.instagram}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`Instagram de ${pessoa.name}`}
+                      className="transition-transform hover:scale-105 hover:opacity-90"
+                    >
+                      <Image
+                        src="/img/instagram1.png"
+                        alt={`Instagram de ${pessoa.name}`}
+                        width={22}
+                        height={22}
+                      />
+                    </a>
+
+                    <a
+                      href={pessoa.linkedin}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`LinkedIn de ${pessoa.name}`}
+                      className="transition-transform hover:scale-105 hover:opacity-90"
+                    >
+                      <Image
+                        src="/img/linkedin1.png"
+                        alt={`LinkedIn de ${pessoa.name}`}
+                        width={22}
+                        height={22}
+                      />
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}
