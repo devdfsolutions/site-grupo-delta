@@ -81,7 +81,7 @@ export default function HomePage() {
               rel="noreferrer"
               className="
                 inline-flex items-center justify-center
-                rounded-full border border-white/80 bg-white
+                rounded-full border border-white/10 bg-white/30
                 px-7 py-3 text-[13px] font-semibold text-[#1c2743]
                 shadow-sm
                 transition-all duration-300
