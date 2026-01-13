@@ -49,7 +49,7 @@ export default function LocacaoPage() {
 
               <div className="mt-6">
                 <Link
-                  href="https://api.whatsapp.com/send/?phone=5521995303032&text&type=phone_number&app_absent=0"
+                  href="https://api.whatsapp.com/send/?phone=5521986560236&text&type=phone_number&app_absent=0"
                   target="_blank"
                   className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-sky-600 hover:bg-sky-700 text-sm md:text-base font-semibold shadow-md"
                 >
