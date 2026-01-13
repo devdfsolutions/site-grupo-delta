@@ -32,7 +32,7 @@ export default function InspecaoPage() {
 
           {/* Botão WhatsApp visível somente no hover */}
           <Link
-            href="https://api.whatsapp.com/send/?phone=5521995303032&text&type=phone_number&app_absent=0"
+            href="https://api.whatsapp.com/send/?phone=5521986560236&text&type=phone_number&app_absent=0"
             className="opacity-0 group-hover:opacity-100 mt-6 px-8 py-3 rounded-full bg-sky-600 hover:bg-sky-700 transition-all text-white font-semibold shadow-lg"
           >
             Mensagem
@@ -104,7 +104,7 @@ export default function InspecaoPage() {
 
             <div>
               <Link
-                href="https://api.whatsapp.com/send/?phone=5521995303032&text&type=phone_number&app_absent=0"
+                href="https://api.whatsapp.com/send/?phone=5521986560236&text&type=phone_number&app_absent=0"
                 className="inline-flex items-center justify-center px-10 py-3 rounded-full bg-sky-600 text-white text-sm md:text-base font-semibold shadow-md hover:bg-sky-700 transition-colors"
               >
                 Entre em contato
