@@ -57,7 +57,7 @@ export default function LsaSalvatagemPage() {
 
             {/* BOTÃO WHATSAPP */}
             <Link
-              href="https://api.whatsapp.com/send/?phone=5521995303032&text&type=phone_number&app_absent=0"
+              href="https://api.whatsapp.com/send/?phone=5521986560236&text&type=phone_number&app_absent=0"
               target="_blank"
               className="
           px-8 py-3 rounded-full 
