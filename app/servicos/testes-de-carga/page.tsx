@@ -52,7 +52,7 @@ export default function TestesDeCargaPage() {
 
             {/* BOTÃO WHATSAPP – SÓ FICA 100% VISÍVEL NO HOVER */}
             <a
-              href="https://api.whatsapp.com/send/?phone=5521997714249&text&type=phone_number&app_absent=0"
+              href="https://api.whatsapp.com/send/?phone=5521986560236&text&type=phone_number&app_absent=0"
               target="_blank"
               rel="noreferrer"
               className="
@@ -146,7 +146,7 @@ export default function TestesDeCargaPage() {
             <div className="flex flex-wrap gap-4">
               
               <a
-                href="https://api.whatsapp.com/send/?phone=5521997714249&text&type=phone_number&app_absent=0"
+                href="https://api.whatsapp.com/send/?phone=5521986560236&text&type=phone_number&app_absent=0"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-full border border-sky-600 text-sky-700 text-sm md:text-base font-semibold hover:bg-sky-50 transition-colors"
