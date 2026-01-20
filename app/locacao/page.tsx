@@ -7,6 +7,9 @@ import { useState } from "react";
 
 type Mode = "locacao" | "venda";
 
+const WHATSAPP_URL =
+  "https://api.whatsapp.com/send/?phone=5521986560236&text&type=phone_number&app_absent=0";
+
 export default function LocacaoPage() {
   const [mode, setMode] = useState<Mode>("locacao");
 
@@ -49,7 +52,7 @@ export default function LocacaoPage() {
 
               <div className="mt-6">
                 <Link
-                  href="https://api.whatsapp.com/send/?phone=5521986560236&text&type=phone_number&app_absent=0"
+                  href={WHATSAPP_URL}
                   target="_blank"
                   className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-sky-600 hover:bg-sky-700 text-sm md:text-base font-semibold shadow-md"
                 >
@@ -149,14 +152,35 @@ export default function LocacaoPage() {
             BLOCO BOTE + TOGGLE LOCAÇÃO / VENDA
            ===================================== */}
         <section className="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
-          {/* Imagem grande */}
-          <div className="relative w-full min-h-[260px] md:min-h-[320px]">
+          {/* Imagem grande COM HOVER IGUAL HERO */}
+          <div className="relative w-full min-h-[260px] md:min-h-[320px] rounded-xl overflow-hidden group">
             <Image
               src="/img/locacao/loc5.png"
               alt="Bote de resgate Grupo Delta"
               fill
-              className="object-cover rounded-xl"
+              className="object-cover"
             />
+
+            {/* Overlay: sempre visível no mobile, só no hover no desktop */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/20 to-black/50 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300" />
+
+            {/* Conteúdo (botão) */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div
+                className="
+                  opacity-100 md:opacity-0 md:group-hover:opacity-100
+                  transition-opacity duration-300
+                "
+              >
+                <Link
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-sky-600 hover:bg-sky-700 text-sm md:text-base font-semibold shadow-md"
+                >
+                  Fale Conosco
+                </Link>
+              </div>
+            </div>
           </div>
 
           {/* Texto com toggle */}
@@ -228,8 +252,7 @@ export default function LocacaoPage() {
                 <p>
                   Quando o assunto é segurança no mar, o Grupo Delta oferece
                   soluções de excelência com a{" "}
-                  <strong>venda de botes de resgate</strong> de alta
-                  qualidade.
+                  <strong>venda de botes de resgate</strong> de alta qualidade.
                 </p>
                 <p>
                   Além disso, oferecemos consultoria técnica para ajudar sua
