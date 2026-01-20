@@ -152,36 +152,48 @@ export default function LocacaoPage() {
             BLOCO BOTE + TOGGLE LOCAÇÃO / VENDA
            ===================================== */}
         <section className="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
-          {/* Imagem grande COM HOVER IGUAL HERO */}
-          <div className="relative w-full min-h-[260px] md:min-h-[320px] rounded-xl overflow-hidden group">
-            <Image
-              src="/img/locacao/loc5.png"
-              alt="Bote de resgate Grupo Delta"
-              fill
-              className="object-cover"
-            />
+{/* Imagem grande COM HOVER IGUAL HERO */}
+<div className="relative w-full min-h-[260px] md:min-h-[320px] rounded-xl overflow-hidden group">
+  <Image
+    src="/img/locacao/loc5.png"
+    alt="Bote de resgate Grupo Delta"
+    fill
+    className="object-cover"
+  />
 
-            {/* Overlay: sempre visível no mobile, só no hover no desktop */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/20 to-black/50 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300" />
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/30 to-black/60 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300" />
 
-            {/* Conteúdo (botão) */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div
-                className="
-                  opacity-100 md:opacity-0 md:group-hover:opacity-100
-                  transition-opacity duration-300
-                "
-              >
-                <Link
-                  href={WHATSAPP_URL}
-                  target="_blank"
-                  className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-sky-600 hover:bg-sky-700 text-sm md:text-base font-semibold shadow-md"
-                >
-                  Fale Conosco
-                </Link>
-              </div>
-            </div>
-          </div>
+  {/* Conteúdo */}
+  <div className="absolute inset-0 flex items-center justify-center">
+    <div
+      className="
+        text-center text-white px-4
+        opacity-100 md:opacity-0 md:group-hover:opacity-100
+        transition-opacity duration-300
+      "
+    >
+      <h3 className="text-xl md:text-2xl font-bold tracking-wide">
+        LOCAÇÃO DE BOTES DE RESGATE
+      </h3>
+
+      <p className="mt-2 text-xs md:text-sm text-white/90 max-w-xs mx-auto">
+        Segurança, agilidade e confiabilidade para operações marítimas.
+      </p>
+
+      <div className="mt-5">
+        <Link
+          href={WHATSAPP_URL}
+          target="_blank"
+          className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-sky-600 hover:bg-sky-700 text-sm md:text-base font-semibold shadow-md"
+        >
+          Fale Conosco
+        </Link>
+      </div>
+    </div>
+  </div>
+</div>
+
 
           {/* Texto com toggle */}
           <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-5 md:p-6">
