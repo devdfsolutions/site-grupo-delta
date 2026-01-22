@@ -17,12 +17,18 @@ export async function POST(req: Request) {
       process.env.CONTACT_FROM_EMAIL ||
       "Site Grupo Delta <no-reply@grupodelta.ind.br>";
 
-    const toEmail =
+    // ✅ aceita 1 ou vários emails separados por vírgula
+    const toRaw =
       process.env.CONTACT_TO_EMAIL || "comercial@grupodelta.ind.br";
+
+    const toEmails = toRaw
+      .split(",")
+      .map((s) => s.trim())
+      .filter(Boolean);
 
     await resend.emails.send({
       from: fromEmail,
-      to: toEmail,
+      to: toEmails, // ✅ ARRAY (correto no Resend)
       subject: `Novo contato pelo site - ${nome}`,
       replyTo: email,
       text: `
