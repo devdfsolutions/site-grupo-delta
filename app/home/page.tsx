@@ -13,6 +13,7 @@ export default function HomePage() {
 
   const galleryPhotos = [1, 2, 3, 4, 5, 6];
 
+  // ✅ AJUSTE AQUI: slugs corretos (pastas reais)
   const services = [
     {
       slug: "load-testing",
@@ -22,14 +23,14 @@ export default function HomePage() {
       image: "/img/servicos/testes-carga.jpg",
     },
     {
-      slug: "lsa-lifesaving",
+      slug: "salvatagemen",
       title: "LSA / Lifesaving",
       description:
         "Maintenance and inspection of lifeboats, rescue boats, winches, cranes, davits, and lifesaving equipment, ensuring availability and safety in emergency situations.",
       image: "/img/servicos/lsa-salvatagem1.jpg",
     },
     {
-      slug: "engineering-inspections",
+      slug: "engenhariaen",
       title: "Engineering & Inspections",
       description:
         "Technical inspections, applied engineering, and asset integrity support for offshore and onshore operations, with complete reports and technical documentation.",
@@ -93,7 +94,7 @@ export default function HomePage() {
 
             {/* Secondary Button */}
             <Link
-              href="/servicos"
+              href="/services"
               className="
                 inline-flex items-center justify-center
                 rounded-full border border-white/10 bg-white/30
@@ -275,7 +276,7 @@ export default function HomePage() {
             {services.map((service) => (
               <Link
                 key={service.slug}
-                href={`/servicos/${service.slug}`}
+                href={`/services/${service.slug}`}
                 aria-label={`View details of ${service.title}`}
                 className="group relative block overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:shadow-xl hover:border-[#1c2743]/60 min-h-[300px] md:min-h-[400px]"
               >
