@@ -93,7 +93,7 @@ export default function HomePage() {
 
             {/* Secondary Button */}
             <Link
-              href="/servicos"
+              href="/services"
               className="
                 inline-flex items-center justify-center
                 rounded-full border border-white/10 bg-white/30
@@ -275,7 +275,7 @@ export default function HomePage() {
             {services.map((service) => (
               <Link
                 key={service.slug}
-                href={`/servicos/${service.slug}`}
+                href={`/services/${service.slug}`}
                 aria-label={`View details of ${service.title}`}
                 className="group relative block overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:shadow-xl hover:border-[#1c2743]/60 min-h-[300px] md:min-h-[400px]"
               >
