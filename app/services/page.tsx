@@ -17,14 +17,14 @@ const services = [
     image: "/img/servicos/testes-carga.jpg",
   },
   {
-    slug: "lsa-lifesaving",
+    slug: "salvatagemen", // ✅ AJUSTADO (antes: lsa-lifesaving)
     title: "LSA / Lifesaving",
     description:
       "Inspections, maintenance, and repairs on boats, winches, cranes, davits, and lifesaving equipment, ensuring availability and safety.",
     image: "/img/servicos/lsa-salvatagem1.jpg",
   },
   {
-    slug: "engineering-inspections",
+    slug: "engenhariaen", // ✅ AJUSTADO (antes: engineering-inspections)
     title: "Engineering & Inspections",
     description:
       "Technical inspections, detailed reports, and applied engineering support for offshore and onshore asset integrity.",
@@ -172,7 +172,7 @@ export default function ServicesPage() {
             {services.map((s) => (
               <Link
                 key={s.slug}
-                href={`/servicos/${s.slug}`}
+                href={`/services/${s.slug}`} // ✅ AJUSTADO (antes: /servicos/)
                 className="group relative block rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:shadow-xl hover:border-[#1c2743]/60 min-h-[320px]"
               >
                 <Image
